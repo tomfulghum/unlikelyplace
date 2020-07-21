@@ -12,5 +12,8 @@
 *.xcf filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 
-# Anything in `/RawContent` dir.
+# Anything in `/RawContent` dir
 /RawContent/**/* filter=lfs diff=lfs merge=lfs -text
+
+# Don't use LFS for files in `RawContent/Text/` dir
+/RawContent/Text/**/* -filter -diff -merge -text
